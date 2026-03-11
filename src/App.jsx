@@ -4,7 +4,8 @@ function App() {
   const [fact, setFact] = useState("");
 
   const getFact = async () => {
-    const res = await fetch(import.meta.env.VITE_API_URL)
+    // const res = await fetch(import.meta.env.VITE_API_URL)
+    const res = await fetch("https://catfact.ninja/fact")
     const data = await res.json();
     setFact(data.fact);
   };
